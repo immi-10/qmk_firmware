@@ -68,7 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
 
                                                               [_RAISE] = LAYOUT(
                                                                   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-                                                                  KC_PLUS, KC_TILDE, KC_PIPE, KC_DQUO, KC_QUOT, ,KC_EXLM XXXXXXX, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX,
+                                                                  KC_PLUS, KC_TILDE, KC_PIPE, KC_DQUO, KC_QUOT, KC_EXLM, XXXXXXX, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                                                                   S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, XXXXXXX, XXXXXXX, GUI_SPACE, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
