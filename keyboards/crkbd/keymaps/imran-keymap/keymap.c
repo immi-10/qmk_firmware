@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                                                                   S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, XXXXXXX, XXXXXXX, GUI_SPACE, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  KC_GRV, KC_BSLS, KC_AMPR, KC_HASH, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                                                  KC_GRV, KC_BSLS, KC_EQUAL, KC_AMPR, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                                                   KC_CIRC, KC_DLR, KC_PERC, XXXXXXX, XXXXXXX, XXXXXXX
                                                                   //`--------------------------'  `--------------------------'
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
                                                                   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
                                                                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, ALT_CMD_SPACE, KC_UNDS, KC_UP, KC_RGHT,  KC_AT, S_ALT_RGHT,
                                                                   //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_UNDS, KC_MINUS, KC_ASTR,  KC_EQUAL,S_ALT_LEFT,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_UNDS, KC_MINUS, KC_ASTR,  KC_HASH, S_ALT_LEFT,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                                                                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S_CMD_LEFT, KC_DOWN, CMD_RGHT, ALT_LEFT, ALT_RGHT, S_CMD_RGHT,
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
