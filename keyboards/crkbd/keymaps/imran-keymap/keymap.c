@@ -80,13 +80,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
 
                                                               [_LOWER] = LAYOUT(
                                                                   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, ALT_CMD_SPACE, KC_UNDS, KC_UP, KC_RGHT,  KC_AT, S_ALT_RGHT,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, ALT_CMD_SPACE, KC_UP, KC_RGHT,  KC_HASH, XXXXXXX,
                                                                   //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_UNDS, KC_MINUS, KC_ASTR,  KC_HASH, S_ALT_LEFT,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_UNDS, KC_MINUS, KC_ASTR,  KC_AT, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S_CMD_LEFT, KC_DOWN, CMD_RGHT, ALT_LEFT, ALT_RGHT, S_CMD_RGHT,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DOWN, AT_BSPC, KC_BSLS, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, CM_BSPC, AT_BSPC, CMD_LEFT
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, CM_BSPC, KC_SPC, AT_BSPC
                                                                   //`--------------------------'  `--------------------------'
                                                                   ),
 
