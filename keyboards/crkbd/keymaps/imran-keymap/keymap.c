@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                                                                     OSM_SFT,    KC_A,   KC_S,   KC_R,   KC_T,     KC_D,                        KC_H,      KC_N,      KC_E,   KC_I,   KC_O,   OSM_SFT,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                    OSM(MOD_LALT), S(KC_S), KC_Y, KC_V,     KC_C,   KC_X,                       KC_B,   KC_J,    KC_M,   KC_DOT, KC_COLON, OSM(MOD_LALT),
+                                                                    OSM(MOD_LALT), KC_SPC, KC_Y, KC_V,     KC_C,   KC_X,                       KC_B,   KC_J,    KC_M,   KC_DOT, KC_COLON, OSM(MOD_LALT),
                                                                   //|-------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                                                                                     GUI_COMM, LOW_BSPC, CTL_ESC,    GUI_ENT, RSE_SP, FUNC_A
                                                                                                     //`--------------------------'  `--------------------------'
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
                                                                   S_CMD_LEFT, CMD_LEFT, CMD_RGHT, ALT_LEFT, ALT_RGHT, S_CMD_RGHT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, KC_BSPC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+                                                                  XXXXXXX, KC_J, KC_K, XXXXXXX, XXXXXXX,XXXXXXX
                                                                   //`--------------------------'  `--------------------------'
                                                                   ),
 
