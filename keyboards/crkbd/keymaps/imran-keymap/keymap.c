@@ -68,23 +68,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
 
                                                               [_RAISE] = LAYOUT(
                                                                   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-                                                                  KC_PLUS, KC_TILDE, KC_AT, KC_DQUO, KC_QUOT, KC_EXLM, XXXXXXX, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX,
+                                                                  KC_PLUS, KC_TILDE, KC_AT, KC_DQUO, KC_QUOT, KC_EXLM, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, XXXXXXX, XXXXXXX, GUI_SPACE, XXXXXXX, XXXXXXX, XXXXXXX,
+                                                                  S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                                                                   KC_GRV, KC_BSLS, KC_PIPE, KC_AMPR, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                                  KC_CIRC, KC_DLR, KC_PERC, XXXXXXX, XXXXXXX, XXXXXXX
+                                                                  KC_CIRC, KC_DLR, KC_PERC, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX
                                                                   //`--------------------------'  `--------------------------'
                                                                   ),
 
                                                               [_LOWER] = LAYOUT(
                                                                   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, ALT_CMD_SPACE, KC_UP, KC_RGHT,  KC_HASH, XXXXXXX,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_UNDS, KC_MINUS,  KC_HASH, XXXXXXX,
                                                                   //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_UNDS, KC_MINUS, KC_ASTR,  KC_EQUAL, XXXXXXX,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DOWN, AT_BSPC, KC_BSLS, XXXXXXX, XXXXXXX,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR, AT_BSPC, KC_BSLS, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                                                   XXXXXXX, XXXXXXX, XXXXXXX, CM_BSPC, KC_SPC, AT_BSPC
                                                                   //`--------------------------'  `--------------------------'
