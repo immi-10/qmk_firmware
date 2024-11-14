@@ -28,13 +28,14 @@ enum custom_layers { _QWERTY, _LOWER, _RAISE, _FUNC, _PINKY, _L_LAYER };
 #define GUI_COMM GUI_T(KC_COMM)
 #define LOW_BSPC LT(_LOWER, KC_BSPC)
 #define FUNC_A LT(_FUNC, KC_COLON)
-#define RSE_SP LT(_RAISE, KC_SPC)
+#define RSE_SP LT(_RAISE, KC_SLSH)
 #define OSM_SFT OSM(MOD_LSFT)
 #define PINKY_V LT(_PINKY, KC_COMM)
 
 // For _RAISE layer..
 #define CTL_ESC LCTL_T(KC_ESC)
 #define CTL_QST LCTL_T(KC_SLSH)
+#define CTL_DEL LCTL_T(KC_DEL)
 
 #define GUI_SPACE LGUI(KC_SPC)
 
@@ -56,13 +57,13 @@ enum custom_layers { _QWERTY, _LOWER, _RAISE, _FUNC, _PINKY, _L_LAYER };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT(
                                                                   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-                                                                      KC_TAB,   KC_Q,   KC_W,    KC_F,    KC_G,      KC_P,                      KC_Z,     KC_U,      KC_K,   KC_L,   CTL_QST, KC_DEL,
+                                                                      KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,      KC_T,                      KC_Z,     KC_U,      KC_I,   KC_O,   KC_P, CTL_DEL,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                    OSM_SFT,    KC_A,   KC_S,   KC_R,   KC_T,     KC_D,                        KC_H,      KC_N,      KC_E,   KC_I,   KC_O,   OSM_SFT,
+                                                                    OSM_SFT,    KC_A,   KC_S,   KC_D,   KC_F,     KC_G,                        KC_H,      KC_J,      KC_K,   KC_L,   RSE_SP,   OSM_SFT,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                    OSM(MOD_LALT), KC_SPC, KC_Y, KC_V,     KC_C,   KC_X,                       KC_B,   KC_J,    KC_M,   KC_DOT, KC_COLON, OSM(MOD_LALT),
+                                                                    OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B,   KC_N,    KC_M,   KC_DOT, KC_COLON, OSM(MOD_LALT),
                                                                   //|-------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                                                                    GUI_COMM, LOW_BSPC, CTL_ESC,    GUI_ENT, RSE_SP, FUNC_A
+                                                                                                    GUI_COMM, LOW_BSPC, CTL_ESC,    GUI_ENT, KC_SPC, FUNC_A
                                                                                                     //`--------------------------'  `--------------------------'
                                                                   ),
 
