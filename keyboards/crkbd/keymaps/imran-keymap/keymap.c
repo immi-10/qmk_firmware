@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
                                                                   S_CMD_LEFT, CMD_LEFT, CMD_RGHT, ALT_LEFT, ALT_RGHT, S_CMD_RGHT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, KC_J, KC_K, XXXXXXX, XXXXXXX,XXXXXXX
+                                                                  XXXXXXX, KC_BSPC, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX
                                                                   //`--------------------------'  `--------------------------'
                                                                   ),
 
