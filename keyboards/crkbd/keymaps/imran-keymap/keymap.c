@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {[_QWERTY] = LAYOUT
                                                                   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
                                                                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PIPE, KC_MINUS, KC_UNDS,  KC_HASH, XXXXXXX,
                                                                   //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, XXXXXXX,
+                                                                  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, QK_CAPS_WORD_TOGGLE,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                                                                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ASTR, AT_BSPC, KC_BSLS, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
