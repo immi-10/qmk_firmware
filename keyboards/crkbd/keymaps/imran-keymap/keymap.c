@@ -3,8 +3,16 @@
 #include QMK_KEYBOARD_H
 // #include "keymap_german_mac_iso.h"
 
-enum custom_keycodes { QWERTY = SAFE_RANGE, LOWER, RAISE, FUNC, PINKY, BACKLIT, CLEAR_CMD = SAFE_RANGE };
-
+enum custom_keycodes {
+    QWERTY = SAFE_RANGE, // Starts at SAFE_RANGE
+    LOWER,               // Next value after QWERTY
+    RAISE,               // Next value after LOWER
+    FUNC,                // ...
+    PINKY,
+    BACKLIT,
+    CLEAR_CMD,           // Automatically gets the next unique value
+    GCMSG                // Automatically gets the next unique value after CLEAR_CMD
+};
 enum combos { DF_DASH, JK_ESC };
 
 const uint16_t PROGMEM df_combo[] = {KC_D, KC_F, COMBO_END};
@@ -21,7 +29,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case CLEAR_CMD:
             if (record->event.pressed) {
-                SEND_STRING("clear" SS_TAP(X_ENTER)); // Type "clear" and press Enter
+                SEND_STRING("clear" SS_TAP(X_ENTER));
+            }
+            break;
+        case GCMSG:
+            if (record->event.pressed) {
+                SEND_STRING("gcmsg \"\""); // Type gcmsg ""
+                tap_code(KC_LEFT);
             }
             break;
     }
@@ -92,7 +106,7 @@ OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B
 
         [_LOWER] = LAYOUT(
             //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PIPE, KC_MINUS, KC_UNDS,  KC_HASH, XXXXXXX,
+            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, GCMSG, KC_PIPE, KC_MINUS, KC_UNDS,  KC_HASH, XXXXXXX,
             //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, QK_CAPS_WORD_TOGGLE,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
