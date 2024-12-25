@@ -34,7 +34,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
         case GCMSG:
             if (record->event.pressed) {
-                SEND_STRING("gcmsg \"\""); // Type gcmsg ""
+                SEND_STRING("gcmsg \"\"");
                 tap_code(KC_LEFT);
             }
             break;
