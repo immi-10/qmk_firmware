@@ -3,7 +3,7 @@
 #include QMK_KEYBOARD_H
 // #include "keymap_german_mac_iso.h"
 
-enum custom_keycodes { QWERTY = SAFE_RANGE, LOWER, RAISE, FUNC, PINKY, BACKLIT };
+enum custom_keycodes { QWERTY = SAFE_RANGE, LOWER, RAISE, FUNC, PINKY, BACKLIT, CLEAR_CMD = SAFE_RANGE };
 
 enum combos { DF_DASH, JK_ESC };
 
@@ -16,6 +16,17 @@ combo_t key_combos[COMBO_COUNT] = {
     // For Vim, put Escape on the home row
     [JK_ESC] = COMBO(jk_combo, KC_ESC),
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case CLEAR_CMD:
+            if (record->event.pressed) {
+                SEND_STRING("clear" SS_TAP(X_ENTER)); // Type "clear" and press Enter
+            }
+            break;
+    }
+    return true; // Return true to process other keycodes
+}
 
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
@@ -85,7 +96,7 @@ OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B
             //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, QK_CAPS_WORD_TOGGLE,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LCTL(KC_C), KC_ASTR, AT_BSPC, KC_BSLS, XXXXXXX, XXXXXXX,
+            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, CLEAR_CMD, KC_ASTR, AT_BSPC, LCTL(KC_C), XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
             XXXXXXX, XXXXXXX, XXXXXXX, CM_BSPC, KC_SPC, AT_BSPC
             //`--------------------------'  `--------------------------'
