@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include QMK_KEYBOARD_H
 // #include "keymap_german_mac_iso.h"
-
 enum custom_keycodes {
     QWERTY = SAFE_RANGE, // Starts at SAFE_RANGE
     LOWER,               // Next value after QWERTY
@@ -11,20 +10,12 @@ enum custom_keycodes {
     PINKY,
     BACKLIT,
     CLEAR_CMD,           // Automatically gets the next unique value
-    GCMSG                // Automatically gets the next unique value after CLEAR_CMD
+    GCMSG,               // Automatically gets the next unique value after CLEAR_CMD
+    ALT_ZERO,            // New keycode for Alt + 0
+    ALT_ONE,             // New keycode for Alt + 1
+    ALT_TWO,             // New keycode for Alt + 2
+    ALT_THREE            // New keycode for Alt + 3
 };
-enum combos { DF_DASH, JK_ESC };
-
-const uint16_t PROGMEM df_combo[] = {KC_D, KC_F, COMBO_END};
-const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
-
-combo_t key_combos[COMBO_COUNT] = {
-    // Add commonly used dash to home row
-    [DF_DASH] = COMBO(df_combo, KC_MINS),
-    // For Vim, put Escape on the home row
-    [JK_ESC] = COMBO(jk_combo, KC_ESC),
-};
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case CLEAR_CMD:
@@ -38,9 +29,51 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_LEFT);
             }
             break;
+        case ALT_ZERO: // New case for Alt + 0
+            if (record->event.pressed) {
+                register_code(KC_RALT);  // Hold Alt
+                tap_code(KC_0);          // Press 0
+                unregister_code(KC_RALT); // Release Alt
+            }
+            break;
+        case ALT_ONE: // New case for Alt + 1
+            if (record->event.pressed) {
+                register_code(KC_RALT);  // Hold Alt
+                tap_code(KC_1);          // Press 1
+                unregister_code(KC_RALT); // Release Alt
+            }
+            break;
+        case ALT_TWO: // New case for Alt + 2
+            if (record->event.pressed) {
+                register_code(KC_RALT);  // Hold Alt
+                tap_code(KC_2);          // Press 2
+                unregister_code(KC_RALT); // Release Alt
+            }
+            break;
+        case ALT_THREE: // New case for Alt + 3
+            if (record->event.pressed) {
+                register_code(KC_RALT);  // Hold Alt
+                tap_code(KC_3);          // Press 3
+                unregister_code(KC_RALT); // Release Alt
+            }
+            break;
     }
     return true; // Return true to process other keycodes
-}
+};
+
+
+enum combos { DF_DASH, JK_ESC };
+
+const uint16_t PROGMEM df_combo[] = {KC_D, KC_F, COMBO_END};
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+    // Add commonly used dash to home row
+    [DF_DASH] = COMBO(df_combo, KC_MINS),
+    // For Vim, put Escape on the home row
+    [JK_ESC] = COMBO(jk_combo, KC_ESC),
+};
+
 
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
@@ -108,7 +141,7 @@ OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B
             //,-----------------------------------------------------.                    ,-----------------------------------------------------.
             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, GCMSG, KC_PIPE, KC_MINUS, KC_UNDS,  KC_HASH, XXXXXXX,
             //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, QK_CAPS_WORD_TOGGLE,
+            XXXXXXX, ALT_THREE, ALT_TWO, ALT_ZERO, ALT_ONE, XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, QK_CAPS_WORD_TOGGLE,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, CLEAR_CMD, KC_ASTR, AT_BSPC, LCTL(KC_C), XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
