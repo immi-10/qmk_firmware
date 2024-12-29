@@ -141,7 +141,7 @@ OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B
             //,-----------------------------------------------------.                    ,-----------------------------------------------------.
             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, GCMSG, KC_PIPE, KC_MINUS, KC_UNDS,  KC_HASH, XXXXXXX,
             //|--------+--------+--------+----s----+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-            XXXXXXX, ALT_THREE, ALT_TWO, ALT_ZERO, ALT_ONE, XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, QK_CAPS_WORD_TOGGLE,
+            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,  KC_EQUAL, QK_CAPS_WORD_TOGGLE,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, CLEAR_CMD, KC_ASTR, AT_BSPC, LCTL(KC_C), XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
