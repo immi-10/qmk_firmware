@@ -11,11 +11,10 @@ enum custom_keycodes {
     BACKLIT,
     CLEAR_CMD,           // Automatically gets the next unique value
     GCMSG,               // Automatically gets the next unique value after CLEAR_CMD
-    ALT_ZERO,            // New keycode for Alt + 0
-    ALT_ONE,             // New keycode for Alt + 1
-    ALT_TWO,             // New keycode for Alt + 2
-    ALT_THREE            // New keycode for Alt + 3
+    GUI_ALT_LEFT,        // Custom keycode for GUI + ALT + Left Arrow
+    GUI_ALT_RIGHT,
 };
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case CLEAR_CMD:
@@ -29,32 +28,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code(KC_LEFT);
             }
             break;
-        case ALT_ZERO: // New case for Alt + 0
+        case GUI_ALT_LEFT:
             if (record->event.pressed) {
-                register_code(KC_RALT);  // Hold Alt
-                tap_code(KC_0);          // Press 0
-                unregister_code(KC_RALT); // Release Alt
+                register_code(KC_LGUI);
+                register_code(KC_LALT);
+                tap_code(KC_LEFT);
+                unregister_code(KC_LALT);
+                unregister_code(KC_LGUI);
             }
             break;
-        case ALT_ONE: // New case for Alt + 1
+        case GUI_ALT_RIGHT:
             if (record->event.pressed) {
-                register_code(KC_RALT);  // Hold Alt
-                tap_code(KC_1);          // Press 1
-                unregister_code(KC_RALT); // Release Alt
-            }
-            break;
-        case ALT_TWO: // New case for Alt + 2
-            if (record->event.pressed) {
-                register_code(KC_RALT);  // Hold Alt
-                tap_code(KC_2);          // Press 2
-                unregister_code(KC_RALT); // Release Alt
-            }
-            break;
-        case ALT_THREE: // New case for Alt + 3
-            if (record->event.pressed) {
-                register_code(KC_RALT);  // Hold Alt
-                tap_code(KC_3);          // Press 3
-                unregister_code(KC_RALT); // Release Alt
+                register_code(KC_LGUI);
+                register_code(KC_LALT);
+                tap_code(KC_RIGHT);
+                unregister_code(KC_LALT);
+                unregister_code(KC_LGUI);
             }
             break;
     }
@@ -129,11 +118,11 @@ OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B
             //,-----------------------------------------------------.                    ,-----------------------------------------------------.
             KC_PLUS, KC_TILDE, KC_AT, KC_DQUO, KC_QUOT, KC_EXLM, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-            S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+            S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             KC_GRV, KC_BSLS, KC_PIPE, KC_AMPR, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-            KC_CIRC, KC_DLR, KC_PERC, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX
+            KC_CIRC, KC_DLR, KC_PERC, GUI_ALT_LEFT, GUI_ALT_RIGHT, XXXXXXX
             //`--------------------------'  `--------------------------'
         ),
 
