@@ -118,11 +118,11 @@ OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B
             //,-----------------------------------------------------.                    ,-----------------------------------------------------.
             KC_PLUS, KC_TILDE, KC_AT, KC_DQUO, KC_QUOT, KC_EXLM, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-            S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+            S(KC_COMM), S(KC_DOT), KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, GUI_ALT_LEFT, GUI_ALT_RIGHT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
             KC_GRV, KC_BSLS, KC_PIPE, KC_AMPR, KC_LBRC, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-            KC_CIRC, KC_DLR, KC_PERC, GUI_ALT_LEFT, GUI_ALT_RIGHT, XXXXXXX
+            KC_CIRC, KC_DLR, KC_PERC, KC_KB_VOLUME_DOWN, KC_KB_VOLUME_UP, XXXXXXX
             //`--------------------------'  `--------------------------'
         ),
 
