@@ -145,10 +145,10 @@ OSM(MOD_LALT), KC_BSLS, KC_Y, KC_X,     KC_C,   KC_V,                       KC_B
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
                                                                   XXXXXXX, KC_4, KC_3, KC_2, KC_1, KC_0, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                                                   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-                                                                  S_CMD_LEFT, CMD_LEFT, CMD_RGHT, ALT_LEFT, ALT_RGHT, S_CMD_RGHT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                                                  S_CMD_LEFT, CMD_LEFT, CMD_RGHT, ALT_LEFT, ALT_RGHT, S_CMD_RGHT, XXXXXXX, XXXXXXX, XXXXXXX, KC_DOT, XXXXXXX, XXXXXXX,
 
                                                                   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                                                  XXXXXXX, KC_BSPC, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX
+                                                                  KC_COMM, KC_BSPC, XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX
                                                                   //`--------------------------'  `--------------------------'
                                                                   ),
 
